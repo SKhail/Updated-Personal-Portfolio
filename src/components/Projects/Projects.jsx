@@ -4,6 +4,8 @@ import SmartGadget from '../../assets/Images/Smart-Gadget.svg';
 import MovieQuest from '../../assets/Images/Move-Quest.svg';
 import AnimeQuest from '../../assets/Images/Anime-Quest.svg';
 
+//importing child components
+import { ProjectButton } from '../Projects/ProjectButton';
 const projects = [
   {
     id: 1,
@@ -48,7 +50,7 @@ const Projects = () => {
               <div className='relative overflow-hidden rounded-xl'>
                 <img src={project.image} alt={project.title} loading='lazy' className='h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105' />
               </div>
-              <div className='mt-6 flex flex-col items-center'>
+              <div className='flex flex-col items-center'>
                 <h3 className='text-2xl flex items-center font-semibold text-gray-800 dark:text-white'>{project.title}</h3>
                 <p className='mt-6 mb-8 text-gray-600 dark:text-gray-300'>{project.description}</p>
                 <a href={project.link} className='inline-block'>
@@ -57,6 +59,9 @@ const Projects = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className=' mt-8 flex flex-col items-center'>
+          <ProjectButton />
         </div>
       </div>
     </div>

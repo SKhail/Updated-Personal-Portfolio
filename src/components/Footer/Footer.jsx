@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import emailjs from 'emailjs-com';
 
+//images
+
+import FooterImage from '../../assets/Images/mountain.jpg';
 //Components
 import Container from '../Header/Container';
 
@@ -8,107 +11,23 @@ import Container from '../Header/Container';
 import '../Footer/Footer.css';
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  //handle validation if people spam the text boxes
-  const validate = () => {
-    const errors = {};
-    if (!formData.name) {
-      errors.name = 'Please add a Name';
-    }
-    if (!formData.email) {
-      errors.email = 'Please add an Email';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Email address is invalid';
-    }
-    if (!formData.message) {
-      errors.message = 'Please add a message';
-    }
-    return errors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setErrors(validate());
-    if (Object.keys(errors).length === 0) {
-      setIsSubmitting(true);
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID').then(
-        (result) => {
-          console.log(result.text);
-          setIsSubmitting(false);
-          setFormData({
-            name: '',
-            email: '',
-            message: '',
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          setIsSubmitting(false);
-        }
-      );
-    }
-  };
-
   return (
-    <Container>
-      <div className='mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6'>
-        <div className='w-full text-gray-600 dark:text-gray-300'>
-          <form onSubmit={handleSubmit} className='space-y-4'>
-            <div>
-              <h4 className='pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl'>Have Any Questions?</h4>
-              <p className='font-body text-gray-600'>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit condimentum turpis nisl sem, viverra habitasse urna ante lobortis fermentum accumsan. Viverra
-                habitasse urna ante lobortis fermentum accumsan.
-              </p>
-
-              <label htmlFor='name' className='block text-sm font-medium'>
-                Name
-              </label>
-              <input type='text' name='name' id='name' value={formData.name} onChange={handleChange} className='mt-1 p-2 w-full border rounded' />
-              {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
-            </div>
-            <div>
-              <label htmlFor='email' className='block text-sm font-medium'>
-                Email
-              </label>
-              <input type='email' name='email' id='email' value={formData.email} onChange={handleChange} className='mt-1 p-2 w-full border rounded' />
-              {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
-            </div>
-            <div>
-              <label htmlFor='message' className='block text-sm font-medium'>
-                Message
-              </label>
-              <textarea name='message' id='message' rows='4' value={formData.message} onChange={handleChange} className='mt-1 p-2 w-full border rounded'></textarea>
-              {errors.message && <p className='text-red-500 text-sm'>{errors.message}</p>}
-            </div>
-            <div>
-              <button type='submit' className='mt-6 w-full bg-primary text-white p-2 rounded' disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-            </div>
+    <>
+      <div className='relative bg-primary bg-cover bg-center bg-no-repeat py-16 bg-blend-multiply lg:py-24' style={{ backgroundImage: `url(${FooterImage})` }}>
+        <div className='container relative z-30'>
+          <h3 className='text-center font-header text-3xl uppercase leading-tight tracking-wide text-white sm:text-4xl lg:text-5xl'>
+            Keep <span className='font-bold'>up-to-date</span> <br />
+            with what I'm up to
+          </h3>
+          <form className='mt-6 flex flex-col justify-center sm:flex-row'>
+            <input className='w-full rounded px-4 py-3 font-body text-black sm:w-2/5 sm:py-4 lg:w-1/3' type='text' id='email' placeholder='Give me your Email' />
+            <button className='mt-2 rounded bg-yellow px-8 py-3 font-body text-base font-bold uppercase text-primary transition-colors hover:bg-primary hover:text-white focus:border-transparent focus:outline-none focus:ring focus:ring-yellow sm:ml-2 sm:mt-0 sm:py-4 md:text-lg'>
+              Join the club
+            </button>
           </form>
-          <div className='blur-[106px] h-50 bg-hero-section'></div>
-          <div className='blur-[106px] h-32 bg-purple-section'></div>
         </div>
-        <div className='flex w-full justify-center text-gray-600 dark:text-gray-300 sm:w-5/12 md:justify-end mt-10 md:mt-0'></div>
       </div>
-    </Container>
+    </>
   );
 };
 
