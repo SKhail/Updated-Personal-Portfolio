@@ -6,6 +6,7 @@ import AnimeQuest from '../../assets/Images/Anime-Quest.svg';
 
 //importing child components
 import { ProjectButton } from '../Projects/ProjectButton';
+
 const projects = [
   {
     id: 1,
@@ -13,6 +14,7 @@ const projects = [
     title: 'Smart Gadget',
     description: 'A ecommerce app for discovering and purchasing the latest gadgets. Smart Gadget App offers an unparalleled shopping experience for tech enthusiasts.',
     link: { SmartGadget },
+    github: 'https://smart-gadget123.netlify.app/',
   },
   {
     id: 2,
@@ -21,13 +23,16 @@ const projects = [
     description:
       'Movie-Quest users can easily search for the movie that they are interested to know more information. This was built with a team 4.experience for tech enthusiasts',
     link: { MovieQuest },
+    github: 'rootgeorge17.github.io/Movie-Quest/',
   },
+
   {
     id: 3,
     image: AnimeQuest,
     title: 'Anime Quest',
     description: 'The focus on this project is to build a quiz with popular Anime type of questions that will include high score system for players to keep track.',
     link: { AnimeQuest },
+    github: 'https://skhail.github.io/Anime-Quiz/',
   },
 ];
 
@@ -54,7 +59,9 @@ const Projects = () => {
                 <h3 className='text-2xl flex items-center font-semibold text-gray-800 dark:text-white'>{project.title}</h3>
                 <p className='mt-6 mb-8 text-gray-600 dark:text-gray-300'>{project.description}</p>
                 <a href={project.link} className='inline-block'>
-                  <span className='text-info dark:text-blue-300'>View Github</span>
+                  <a href={project.github} className='text-info dark:text-blue-300'>
+                    View Github
+                  </a>
                 </a>
               </div>
             </div>

@@ -1,28 +1,93 @@
 import React from 'react';
 import WeatherApp from '../../assets/Images/Weather-App.png';
+import RPSGame from '../../assets/Images/RPSGame.png';
+
+const projects = [
+  {
+    id: 1,
+    image: WeatherApp,
+    title: 'Weather Dashboard',
+    description:
+      'This Weather application allows users to efficiently view their desired city. The provides a user a friendly interface enabling a user to search for a city and the city will be added in the Saved Cities.',
+    link: { WeatherApp },
+    github: 'https://skhail.github.io/Weather-Dashboard/',
+  },
+  {
+    id: 2,
+    image: RPSGame,
+    title: 'RPS Game',
+    description:
+      'Rock, Paper, Scissors is game played between two people, where each player has a choice of 👊🏽 ✋🏽 ✄ it is a simple yet strategic game that often resolves disputes, entertains friends and bring joy to all ages.',
+    link: { RPSGame },
+    github: 'https://skhail.github.io/RPS-Game/',
+  },
+  {
+    id: 3,
+    image: RPSGame,
+    title: 'RPS Game',
+    description: 'Rock, Paper, Scissors is game played between two people, where each player has a choice of 👊🏽 ✋🏽 ✄',
+    link: { RPSGame },
+    github: 'https://skhail.github.io/RPS-Game/',
+  },
+  {
+    id: 4,
+    image: RPSGame,
+    title: 'RPS Game',
+    description: 'Rock, Paper, Scissors is game played between two people, where each player has a choice of 👊🏽 ✋🏽 ✄',
+    link: { RPSGame },
+    github: 'https://skhail.github.io/RPS-Game/',
+  },
+  {
+    id: 5,
+    image: RPSGame,
+    title: 'RPS Game',
+    description: 'Rock, Paper, Scissors is game played between two people, where each player has a choice of 👊🏽 ✋🏽 ✄',
+    link: { RPSGame },
+    github: 'https://skhail.github.io/RPS-Game/',
+  },
+  {
+    id: 6,
+    image: RPSGame,
+    title: 'RPS Game',
+    description: 'Rock, Paper, Scissors is game played between two people, where each player has a choice of 👊🏽 ✋🏽 ✄',
+    link: { RPSGame },
+    github: 'https://skhail.github.io/RPS-Game/',
+  },
+];
+
 const SeeMoreProjects = () => {
   return (
-    <>
-      <div className='container py-16 md:py-20' id='portfolio'>
-        <h2 className='text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl'>Check out my Portfolio</h2>
-        <h3 className='pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl'>Here's what I have done with the past</h3>
-
-        <div className='mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2'>
-          <a href='/' className='mx-auto transform transition-all hover:scale-105 md:mx-0'>
-            <img src={WeatherApp} className='w-full shadow' alt='portfolio image' />
-          </a>
-          <a href='/' className='mx-auto transform transition-all hover:scale-105 md:mx-0'>
-            <img src={WeatherApp} className='w-full shadow' alt='portfolio image' />
-          </a>
-          <a href='/' className='mx-auto transform transition-all hover:scale-105 md:mx-0'>
-            <img src={WeatherApp} className='w-full shadow' alt='portfolio image' />
-          </a>
-          <a href='/' className='mx-auto transform transition-all hover:scale-105 md:mx-0'>
-            <img src={WeatherApp} className='w-full shadow' alt='portfolio image' />
-          </a>
+    <div className='py-12 bg-gray-100 dark:bg-gray-900'>
+      <div className='container mx-auto px-4'>
+        <div className='mb-12 text-center'></div>
+        <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className='group p-6 sm:p-8 rounded-3xl bg-white border border-purple-section dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10'
+            >
+              <div className='relative overflow-hidden rounded-xl'>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading='lazy'
+                  className='h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105 border-purple-section bg-white border '
+                />
+              </div>
+              <div className='flex flex-col items-center'>
+                <h3 className='text-2xl flex items-center font-semibold text-gray-800 dark:text-white'>{project.title}</h3>
+                <p className='mt-6 mb-8 text-gray-600 dark:text-gray-300'>{project.description}</p>
+                <a href={project.link} className='inline-block'>
+                  <a href={project.github} className='text-info dark:text-blue-300'>
+                    View Github
+                  </a>
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
