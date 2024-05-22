@@ -13,7 +13,7 @@ export const ProjectButton = () => {
 
 const DrawOutlineButton = ({ children, ...rest }) => {
   return (
-    <button {...rest} className='group relative px-4 py-2 font-medium text-black transition-colors duration-[400ms] hover:text-purple-section'>
+    <button {...rest} className='dark:text-purple-section group relative px-4 py-2 font-medium text-black transition-colors duration-[400ms] hover:text-purple-section'>
       <span>{children}</span>
 
       {/* TOP */}

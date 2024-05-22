@@ -17,3 +17,6 @@
   clip-path: polygon(100% 100%, 100% 0, 0 100%);
   z-index: -1;
 } */
+.github-icon:active {
+  filter: blur(2px) brightness(0.75);
+}

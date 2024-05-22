@@ -2,16 +2,16 @@ import React from 'react';
 
 import HeroSection from '../Hero/HeroSection.jsx';
 import Projects from '../Projects/Projects.jsx';
-import Footer from '../Footer/Footer.jsx';
 import ContactPage from '../ContactPage/ContactPage.jsx';
 
-const Home = () => {
+const Home = ({ darkMode }) => {
   return (
     <>
-      <HeroSection />
-      <Projects />
-      <ContactPage />
-      <Footer />
+      <HeroSection darkMode={darkMode} />
+
+      <Projects darkMode={darkMode} />
+
+      <ContactPage darkMode={darkMode} />
     </>
   );
 };

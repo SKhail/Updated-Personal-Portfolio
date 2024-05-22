@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const BlazeByteButton = () => {
   return (
-    <div className='grid min-h-[50px] place-content-center p-4'>
+    <div className='grid min-h-[50px] place-content-center p-4 '>
       <Link to='/BlazeByteSolution'>
         <DrawOutlineButton>BlazeByte Solutions</DrawOutlineButton>
       </Link>
@@ -13,7 +13,7 @@ export const BlazeByteButton = () => {
 
 const DrawOutlineButton = ({ children, ...rest }) => {
   return (
-    <button {...rest} className='group relative px-4 py-2 font-medium text-black transition-colors duration-[400ms] hover:text-purple-section'>
+    <button {...rest} className='dark:text-purple-section group relative px-4 py-2 font-medium text-black transition-colors duration-[400ms] hover:text-purple-section'>
       <span>{children}</span>
 
       {/* TOP */}
