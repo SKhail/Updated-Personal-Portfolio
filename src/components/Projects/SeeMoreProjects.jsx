@@ -76,9 +76,9 @@ const SeeMoreProjects = () => {
               </div>
               <div className='flex flex-col items-center'>
                 <h3 className='text-2xl flex items-center font-semibold text-gray-800 dark:text-white'>{project.title}</h3>
-                <p className='mt-6 mb-8 text-gray-600 dark:text-gray-300'>{project.description}</p>
+                <p className='mt-6 mb-8 text-gray-600 dark:text-gray-300 font-nav font-extralight'>{project.description}</p>
                 <a href={project.link} className='inline-block'>
-                  <a href={project.github} className='text-info dark:text-blue-300'>
+                  <a href={project.github} className='font-header  dark:text-purple-section' target='_blank'>
                     View Github
                   </a>
                 </a>

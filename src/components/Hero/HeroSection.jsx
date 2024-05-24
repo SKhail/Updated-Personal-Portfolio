@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import BlazeByteButton from './BlazeByteButton';
 
 //css
-import '../Header/Header.css';
+import '../Hero/HeroSection.css';
 
 // Icons
 import ProfilePic from '../../assets/Images/profilepic.png';
@@ -53,19 +53,24 @@ const HeroSection = () => {
               </span>
               <span className='text-primary dark:text-white'>{changeWord}</span>
             </h1>
-            <div className=' py-4 mt-12 lg:mt-0 flex justify-center '>
+            <div className=' py-4 mt-12 lg:mt-0 flex justify-center'>
               {/* Profile Picture */}
               <img src={ProfilePic} alt='Profile' className='h-48 rounded-full sm:h-56' />
-              {/* GitHub Icon (only displayed on mobile) */}
-              <a href='https://github.com/SKhail' target='_blank' rel='noopener noreferrer' className='lg:hidden'>
-                <img src={GithubIcon} alt='GitHub' width='16' height='16' className='py-4 mx-3 github-icon transition-transform transform hover:scale-105 active:scale-95' />
+            </div>
+            <div className='flex items-center justify-center pt-5 pl-2 space-x-10'>
+              {/* GitHub Icon */}
+
+              <a href='https://github.com/SKhail' target='_blank' rel='noopener noreferrer' className='hover:opacity-75'>
+                <img src={GithubIcon} alt='GitHub' width='30' height='30' className='github-btn' />
               </a>
-              {/* Gmail Icon (only displayed on mobile) */}
-              <a href='mailto:saidkhail091@gmail.com' target='_blank' rel='noopener noreferrer' className='lg:hidden'>
-                <img src={GmailIcon} alt='Gmail' width='16' height='16' className='py-4 github-icon transition-transform transform hover:scale-105 active:scale-95' />
+
+              {/* Gmail Icon */}
+              <a href='mailto:saidkhail091@gmail.com' target='_blank' rel='noopener noreferrer' className='hover:opacity-75 '>
+                <img src={GmailIcon} alt='Gmail' width='30' height='30' className='gmail-btn' />
               </a>
             </div>
-            <p className='mt-4 text-gray-700 dark:text-gray-300'>
+
+            <p className='mt-4 text-gray-700 dark:text-gray-300 font-nav font-extralight'>
               I've traversed various domains within the IT landscape. Amidst the challenging times of the COVID period, I ventured into entrepreneurship, establishing and later
               divesting my own company within the span of a year. Technology, in its entirety,has long captivated my interest. While my journey encompassed diverse IT realms,
               software development initially posed a unique challenge, one that intrigued me and continues to do so. Should you seek further insights or have any inquiries, please
@@ -83,28 +88,7 @@ const HeroSection = () => {
                 <h4 className='pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl dark:text-white'>My Toolbox & Things I Can Do</h4>
 
                 <div className='flex flex-col justify-center pt-6 sm:flex-row lg:justify-start'>
-                  <div className='flex items-center justify-center sm:justify-start'>
-                    <div className='hidden sm:block'>
-                      <i className='bx bx-chevron-right text-2xl text-primary'></i>
-                    </div>
-                  </div>
-                  <div className='flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0'>
-                    <a href='/' className='pl-4'>
-                      <i className='bx bxl-facebook-square text-2xl text-primary hover:text-yellow'></i>
-                    </a>
-                    <a href='/' className='pl-4'>
-                      <i className='bx bxl-twitter text-2xl text-primary hover:text-yellow'></i>
-                    </a>
-                    <a href='/' className='pl-4'>
-                      <i className='bx bxl-dribbble text-2xl text-primary hover:text-yellow'></i>
-                    </a>
-                    <a href='/' className='pl-4'>
-                      <i className='bx bxl-linkedin text-2xl text-primary hover:text-yellow'></i>
-                    </a>
-                    <a href='/' className='pl-4'>
-                      <i className='bx bxl-instagram text-2xl text-primary hover:text-yellow'></i>
-                    </a>
-                  </div>
+                  <div className='flex items-center justify-center sm:justify-start'></div>
                 </div>
               </div>
               <div className='w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0'>

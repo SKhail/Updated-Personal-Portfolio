@@ -8,9 +8,7 @@ const Home = ({ darkMode }) => {
   return (
     <>
       <HeroSection darkMode={darkMode} />
-
       <Projects darkMode={darkMode} />
-
       <ContactPage darkMode={darkMode} />
     </>
   );

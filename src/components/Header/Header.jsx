@@ -66,9 +66,9 @@ const Header = ({ darkMode, toggleDarkMode }) => {
   return (
     <header>
       <nav
-        className={`flex items-center justify-between lg:px-1 ${
-          darkMode ? 'border-transparent' : 'border-transparent '
-        } dark:text-purple-section fixed top-0 w-full z-10 animate__animated animate__fadeIn`}
+        className={` flex items-center justify-between lg:px-1  bg-purple-400 shadow ${
+          darkMode ? 'bg-purple-900 ' : 'border-transparent'
+        } dark:text-white fixed top-0 w-full z-10 animate__animated animate__fadeIn`}
       >
         <div className='flex flex-wrap items-center justify-between py-2 gap-6 md:py-4 md:gap-0 relative w-full'>
           <div className='relative z-20 w-full flex justify-between lg:w-max md:px-0'>
@@ -77,20 +77,33 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                 <div
                   aria-hidden='true'
                   id='line'
-                  className={`m-auto h-0.5 w-5 rounded bg-sky-900 dark:bg-gray-300 transition duration-300 ${isMobileOpen ? 'rotate-45 translate-y-1.5' : ''}`}
+                  className={`m-auto h-0.5 w-5 rounded bg-black dark:bg-gray-300 transition duration-300 ${isMobileOpen ? 'rotate-45 translate-y-1.5' : ''}`}
                 ></div>
                 <div
                   aria-hidden='true'
                   id='line2'
-                  className={`m-auto mt-2 h-0.5 w-5 rounded  dark:bg-gray-300 transition duration-300 ${isMobileOpen ? '-rotate-45 -translate-y-1' : ''}`}
+                  className={`m-auto mt-2 h-0.5 w-5 rounded bg-black  dark:bg-gray-300 transition duration-300 ${isMobileOpen ? '-rotate-45 -translate-y-1' : ''}`}
+                ></div>
+                <div
+                  aria-hidden='true'
+                  id='line2'
+                  className={`m-auto mt-2 h-0.5 w-5 rounded bg-black  dark:bg-gray-300 transition duration-300 ${isMobileOpen ? '-rotate-90-translate-y-1' : ''}`}
                 ></div>
               </label>
             </div>
           </div>
 
           {/* Mapping Header navbar */}
+          <div className='absolute left-0  px-8 toggle-container'>
+            <Link to='#'>
+              {/* DarkMode toggle buttons */}
+              <span className='relative toggle-button ' onClick={toggleDarkMode}>
+                {darkMode ? <FaMoon /> : <FaSun />}
+              </span>
+            </Link>
+          </div>
           <div className={`text-black lg:pr-1 lg:w-auto w-full lg:pt-0 ${isMobileOpen ? 'block inset-0 bg-white/70 backdrop-blur-lg lg:bg-transparent' : 'hidden lg:block'}`}>
-            <ul className={`dark:text-purple-section lg:flex items-center gap-4 list-none ${isMobileOpen ? 'flex flex-col p-4' : 'hidden lg:flex'}`}>
+            <ul className={`dark:text-white  lg:flex items-center gap-4 list-none ${isMobileOpen ? 'flex flex-col p-4' : 'hidden lg:flex'}`}>
               {HeaderData.map((item) => (
                 <li key={item.id} className='flex items-center'>
                   {item.isScroll ? (
@@ -104,14 +117,14 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                         isPending ? 'pending' : isActive ? 'active' : ''}`}
                     >
                       {/* Display icon only on mobile */}
-                      <span className='lg:hidden'>{item.icon}</span>
+                      <span className='lg:hidden '>{item.icon}</span>
                       {/* Display name lg */}
-                      <span className='hidden lg:inline'>{item.name}</span>
+                      <span className='hidden lg:inline '>{item.name}</span>
                     </a>
                   ) : (
                     <Link
                       to={`/${item.link}`}
-                      className={`inline-block px-7 hover:text-space-grey duration-200 font-header ${({ isActive, isPending }) =>
+                      className={`inline-block px-7 hover:text-space-grey duration-200 font-nav font-extralight ${({ isActive, isPending }) =>
                         isPending ? 'pending' : isActive ? 'active' : ''}`}
                     >
                       {/* Display icon only on mobile */}
@@ -123,15 +136,6 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className=' mt-8 lg:mt-0'>
-            <Link to='#' className='flex items-center justify-center'>
-              {/* DarkMode toggle buttons */}
-              <span className='relative ms-4' onClick={toggleDarkMode}>
-                {darkMode ? <FaMoon /> : <FaSun />}
-              </span>
-            </Link>
           </div>
         </div>
       </nav>

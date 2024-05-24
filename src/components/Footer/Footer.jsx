@@ -14,8 +14,8 @@ const Footer = () => {
   return (
     <>
       <div className='relative bg-primary bg-cover bg-center bg-no-repeat py-16 bg-blend-multiply lg:py-24' style={{ backgroundImage: `url(${FooterImage})` }}>
-        <div className='mt-6 flex flex-col justify-center sm:flex-row'>
-          <button className='font-body font-bold uppercase text-white hover:purple-400 hover:text-black sm:ml-2 sm:mt-0 sm:py-4 md:text-lg'>Made with ♥️ by SK</button>
+        <div className='mt-6 flex  justify-center sm:flex-row'>
+          <div className='font-body font-bold uppercase text-white hover:purple-400 hover:text-black sm:ml-2 sm:mt-0 sm:py-4 md:text-lg'>Made with ♥️ by SK</div>
         </div>
       </div>
     </>

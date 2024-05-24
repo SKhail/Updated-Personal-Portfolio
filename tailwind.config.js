@@ -16,8 +16,9 @@ export default {
         'yellow-400': '#fbbf24'
       },
       fontFamily: {
-        header: ["Merriweather", "serif"],
-        body: ["Poppins", "sans-serif"]
+        header: ["Poppins", "sans-serif"],
+        body: ["Poppins", "sans-serif"],
+        nav: ['Raleway', 'sans-serif']
       }
     },
   },
