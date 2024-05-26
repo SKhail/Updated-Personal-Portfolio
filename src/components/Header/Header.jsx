@@ -34,7 +34,7 @@ const HeaderData = [
     id: 'projects',
     name: 'Projects',
     icon: <FaFolder />,
-    link: 'projects',
+    link: 'SeeMoreProjects',
     isScroll: false,
   },
   {

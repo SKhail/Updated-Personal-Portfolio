@@ -17,7 +17,7 @@ const TheJourney = () => {
             <div className='md:w-2/5'>
               <div className='flex justify-center md:justify-start'>
                 <span className='shrink-0'>
-                  <FaSchool className='h-auto w-32 text-primary' />
+                  <FaSchool className='h-auto w-32 py-5' />
                 </span>
                 <div className='relative ml-3 hidden w-full md:block'>
                   <span className='absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70'></span>
@@ -28,7 +28,7 @@ const TheJourney = () => {
               <div className='relative flex md:pl-18'>
                 <div className='mt-1 flex'>
                   <div className='md:-mt-1 md:pl-8'>
-                    <span className='block pt-2 font-header text-xl font-bold uppercase text-primary dark:text-white'>Secondary School</span>
+                    <span className='block pt-2 font-header text-xl text-center font-bold uppercase text-primary dark:text-white'>Secondary School</span>
                     <div className='pt-2'>
                       <span className='block font-body text-sm text-black dark:text-white'>
                         My fascination with IT began during a two-week government-sponsored program over Easter break. Surrounded by peers my age, I wasn't sure how I ended up
@@ -46,7 +46,7 @@ const TheJourney = () => {
             <div className='md:w-2/5'>
               <div className='flex justify-center md:justify-start'>
                 <span className='shrink-0'>
-                  <MdOutlineMapsHomeWork className='h-auto w-32 text-primary' />
+                  <MdOutlineMapsHomeWork className='h-auto w-32 py-32' />
                 </span>
                 <div className='relative ml-3 hidden w-full md:block'>
                   <span className='absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70'></span>
@@ -55,17 +55,17 @@ const TheJourney = () => {
             </div>
             <div className='md:w-3/5'>
               <div className='relative flex md:pl-18'>
-                <div className='mt-1 flex'>
+                <div className='mt-8 flex'>
                   <div className='md:-mt-1 md:pl-8'>
-                    <span className='block pt-2 font-header text-xl font-bold uppercase text-primary'>A-Levels / Univerisity</span>
+                    <span className='block pt-2 text-center font-header text-xl font-bold uppercase text-primary dark:text-white'>A-Levels / Univerisity</span>
                     <div className='pt-2'>
                       <span className='block font-body text-sm text-black dark:text-white'>
-                        My journey into the world of sciences began during my A-levels. Initially drawn to the fascinating field of toxicology, I encountered unexpected challenges
-                        and found myself pivoting towards the realm of IT. Despite setbacks, I persevered, immersing myself in computer science at university. However, I soon
-                        realized my passion lay elsewhere. Transitioning to business studies proved transformative, culminating in the achievement of a First-Class Honour. Guided
-                        by this newfound clarity, I embarked on a professional journey that ultimately led me to pursue a Master's in Computer Science with a focus on Artificial
-                        Intelligence. This journey, marked by twists and turns, has equipped me with a diverse skill set and a profound appreciation for the intersections of
-                        technology and business.
+                        My journey into the world of Technology did't go traditonally like other people during my A-levels I was drawn to the fascinating field of toxicology, but
+                        realising I didnt enjoy the subjects and found myself pivoting towards the realm of IT. Despite setbacks, I persevered, immersing myself in computer science
+                        at university. However, I soonrealized my passion lay elsewhere. Transitioning to business proved transformative, culminating in the achievement of a
+                        First-Class Honour. Guided by this newfound clarity, I embarked on a professional journey that ultimately led me to pursue a Master's in Computer Science
+                        with a focus on Artificial Intelligence. This journey, marked by twists and turns, has equipped me with a diverse skill set and a profound appreciation for
+                        the intersections of technology and business.
                       </span>
                     </div>
                   </div>
@@ -74,11 +74,11 @@ const TheJourney = () => {
             </div>
           </div>
 
-          <div className='mt-8 flex flex-col text-center md:flex-row md:text-left'>
+          <div className='flex flex-col text-center md:flex-row md:text-left'>
             <div className='md:w-2/5'>
               <div className='flex justify-center md:justify-start'>
                 <span className='shrink-0'>
-                  <SiFreelancer className='h-auto w-32 text-primary' />
+                  <SiFreelancer className='h-auto w-32 py-5' />
                 </span>
                 <div className='relative ml-3 hidden w-full md:block'>
                   <span className='absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70'></span>
@@ -87,9 +87,9 @@ const TheJourney = () => {
             </div>
             <div className='md:w-3/5'>
               <div className='relative flex md:pl-18'>
-                <div className='mt-1 flex'>
+                <div className='flex'>
                   <div className='md:-mt-1 md:pl-8'>
-                    <span className='block pt-2 font-header text-xl font-bold uppercase text-primary'>WorkForce </span>
+                    <span className='block pt-2 text-center font-header text-xl font-bold uppercase text-primary dark:text-white'>WorkForce </span>
                     <div className='pt-2'>
                       <span className='block font-body text-sm text-black dark:text-white'>
                         You might expect my first role to have been in front-end or full-stack development, but my journey began differently. I started as a Technical Support

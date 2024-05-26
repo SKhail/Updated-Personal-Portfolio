@@ -4,6 +4,7 @@ import RPSGame from '../../assets/Images/RPSGame.png';
 import DailyPlanner from '../../assets/Images/Work-Day.svg';
 import JavaCoffee from '../../assets/Images/Java-Coffee.svg';
 import ReadGenerator from '../../assets/Images/Readme-Generator.svg';
+import PendingProject from '../../assets/Images/Pending-Project.svg';
 
 const projects = [
   {
@@ -49,10 +50,11 @@ const projects = [
   },
   {
     id: 6,
-    image: RPSGame,
-    title: 'RPS Game',
-    description: 'Rock, Paper, Scissors is game played between two people, where each player has a choice of 👊🏽 ✋🏽 ✄',
-    github: 'https://skhail.github.io/RPS-Game/',
+    image: PendingProject,
+    title: 'Project Coming',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ',
+    github: 'https://github.com/SKhail',
   },
 ];
 
