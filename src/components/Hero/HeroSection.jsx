@@ -57,16 +57,16 @@ const HeroSection = () => {
               {/* Profile Picture */}
               <img src={ProfilePic} alt='Profile' className='h-48 rounded-full sm:h-56' />
             </div>
-            <div className='flex items-center justify-center pt-5 pl-2 space-x-10'>
+            <div className='flex items-center justify-center pt-2 pl-0.5 space-x-5'>
               {/* GitHub Icon */}
 
               <a href='https://github.com/SKhail' target='_blank' rel='noopener noreferrer' className='hover:opacity-75'>
-                <img src={GithubIcon} alt='GitHub' width='30' height='30' className='github-btn' />
+                <img src={GithubIcon} alt='GitHub' width='20' height='20' className='github-btn' />
               </a>
 
               {/* Gmail Icon */}
               <a href='mailto:saidkhail091@gmail.com' target='_blank' rel='noopener noreferrer' className='hover:opacity-75 '>
-                <img src={GmailIcon} alt='Gmail' width='30' height='30' className='gmail-btn' />
+                <img src={GmailIcon} alt='Gmail' width='20' height='20' className='gmail-btn' />
               </a>
             </div>
 
@@ -74,7 +74,7 @@ const HeroSection = () => {
               I've traversed various domains within the IT landscape. Amidst the challenging times of the COVID period, I ventured into entrepreneurship, establishing and later
               divesting my own company within the span of a year. Technology, in its entirety,has long captivated my interest. While my journey encompassed diverse IT realms,
               software development initially posed a unique challenge, one that intrigued me and continues to do so. Should you seek further insights or have any inquiries, please
-              don't hesitate to reach out. I'm more than willing to share my experiences
+              don't hesitate to reach out. I'm more than willing to share my experiences.work
             </p>
             <div className='mt-12 flex flex-wrap justify-center gap-y-4 gap-x-6'>
               <a href='#' className='relative flex h-1 w-full items-center justify-center px-6 '>
@@ -104,7 +104,7 @@ const HeroSection = () => {
                 <div className='pt-6'>
                   <div className='flex items-end justify-between'>
                     <h4 className='font-body font-semibold uppercase text-black dark:text-white'>Python</h4>
-                    <h3 className='font-body text-3xl font-bold text-primary'>50%</h3>
+                    <h3 className='font-body text-3xl font-bold text-primary dark:text-white'>50%</h3>
                   </div>
                   <div className='mt-2 h-3 w-full rounded-full bg-gray-200'>
                     <div className='h-3 rounded-full bg-primary bg-purple-section' style={{ width: '50%' }}></div>
@@ -113,7 +113,7 @@ const HeroSection = () => {
                 <div className='pt-6'>
                   <div className='flex items-end justify-between'>
                     <h4 className='font-body font-semibold uppercase text-black dark:text-white'>Java</h4>
-                    <h3 className='font-body text-3xl font-bold text-primary'>40%</h3>
+                    <h3 className='font-body text-3xl font-bold text-primary dark:text-white'>40%</h3>
                   </div>
                   <div className='mt-2 h-3 w-full rounded-full bg-gray-200'>
                     <div className='h-3 rounded-full bg-primary bg-purple-section' style={{ width: '40%' }}></div>
@@ -122,7 +122,7 @@ const HeroSection = () => {
                 <div className='pt-6'>
                   <div className='flex items-end justify-between'>
                     <h4 className='font-body font-semibold uppercase text-black dark:text-white'>JavaScript</h4>
-                    <h3 className='font-body text-3xl font-bold text-primary'>85%</h3>
+                    <h3 className='font-body text-3xl font-bold text-primary dark:text-white'>85%</h3>
                   </div>
                   <div className='mt-2 h-3 w-full rounded-full bg-gray-200'>
                     <div className='h-3 rounded-full bg-primary bg-purple-section' style={{ width: '85%' }}></div>

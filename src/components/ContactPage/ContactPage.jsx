@@ -44,7 +44,7 @@ const ContactPage = () => {
     setErrors(validate());
     if (Object.keys(errors).length === 0) {
       setIsSubmitting(true);
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID').then(
+      emailjs.sendForm(REACT_EMAILJS_SERVICE_ID, REACT_EMAILJS_TEMPLATE_ID, e.target, REACT_EMAILJS_USER_ID).then(
         (result) => {
           console.log(result.text);
           setIsSubmitting(false);
@@ -71,8 +71,8 @@ const ContactPage = () => {
               <div>
                 <h4 className='pt-6 py-4 text-center font-header text-xl font-medium  text-black dark:text-white  sm:text-2xl lg:text-3xl'>Have Any Questions?</h4>
                 <p className='font-body py-2 text-gray-600 dark:text-white'>
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit condimentum turpis nisl sem, viverra habitasse urna ante lobortis fermentum accumsan. Viverra
-                  habitasse urna ante lobortis fermentum accumsan.
+                  If you have any questions, feel free to reach out. I've provided a contact form for your convenience. Your inquiries are important to me, and I'll get back to you
+                  as soon as possible.
                 </p>
 
                 <label htmlFor='name' className='py-1 block text-sm font-medium font-body dark:text-white '>

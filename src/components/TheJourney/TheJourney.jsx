@@ -57,10 +57,15 @@ const TheJourney = () => {
               <div className='relative flex md:pl-18'>
                 <div className='mt-1 flex'>
                   <div className='md:-mt-1 md:pl-8'>
-                    <span className='block pt-2 font-header text-xl font-bold uppercase text-primary'>Software Engineer</span>
+                    <span className='block pt-2 font-header text-xl font-bold uppercase text-primary'>A-Levels / Univerisity</span>
                     <div className='pt-2'>
-                      <span className='block font-body text-black'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim.
+                      <span className='block font-body text-sm text-black dark:text-white'>
+                        My journey into the world of sciences began during my A-levels. Initially drawn to the fascinating field of toxicology, I encountered unexpected challenges
+                        and found myself pivoting towards the realm of IT. Despite setbacks, I persevered, immersing myself in computer science at university. However, I soon
+                        realized my passion lay elsewhere. Transitioning to business studies proved transformative, culminating in the achievement of a First-Class Honour. Guided
+                        by this newfound clarity, I embarked on a professional journey that ultimately led me to pursue a Master's in Computer Science with a focus on Artificial
+                        Intelligence. This journey, marked by twists and turns, has equipped me with a diverse skill set and a profound appreciation for the intersections of
+                        technology and business.
                       </span>
                     </div>
                   </div>
@@ -84,10 +89,13 @@ const TheJourney = () => {
               <div className='relative flex md:pl-18'>
                 <div className='mt-1 flex'>
                   <div className='md:-mt-1 md:pl-8'>
-                    <span className='block pt-2 font-header text-xl font-bold uppercase text-primary'>DevOps Engineer</span>
+                    <span className='block pt-2 font-header text-xl font-bold uppercase text-primary'>WorkForce </span>
                     <div className='pt-2'>
-                      <span className='block font-body text-black'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim.
+                      <span className='block font-body text-sm text-black dark:text-white'>
+                        You might expect my first role to have been in front-end or full-stack development, but my journey began differently. I started as a Technical Support
+                        Specialist for a SaaS company, where I assisted B2B clients with technology adoption issues. My responsibilities included troubleshooting and providing
+                        solutions, occasionally involving JavaScript debugging when clients needed to implement scripts on their websites. This experience ignited my interest in
+                        development, eventually leading me to pursue various roles within the development world.
                       </span>
                     </div>
                   </div>
