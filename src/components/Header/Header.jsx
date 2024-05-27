@@ -20,7 +20,7 @@ const HeaderData = [
     id: 'home',
     name: 'Home',
     icon: <FaHome />,
-    link: 'home',
+    link: '',
     isScroll: false,
   },
   {
