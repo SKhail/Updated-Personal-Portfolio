@@ -33,7 +33,7 @@ function App() {
       <div className={`app ${darkMode ? 'dark-mode' : ''}`}>
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
-          <Route path='/home' element={<Home />} />
+          <Route path='' element={<Home />} />
           <Route path='/thejourney' element={<TheJourney />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/pending' element={<Pending />} />
