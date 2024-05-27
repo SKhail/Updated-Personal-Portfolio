@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const BlazeByteButton = () => {
   return (
     <div className='grid min-h-[50px] place-content-center p-4 '>
-      <Link to='/BlazeByteSolution'>
+      <Link to='/pending'>
         <DrawOutlineButton>BlazeByte Solutions</DrawOutlineButton>
       </Link>
     </div>
