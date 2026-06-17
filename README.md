@@ -59,23 +59,6 @@ npm run dev
 
 This portfolio includes an AI chatbot persona called ByteSaid. It answers questions about Said's skills, experience, education, projects, AI career goals, and contact details.
 
-The chatbot uses:
-
-- React for the chat interface
-- Netlify Functions for the serverless backend
-- Gemini API for AI responses
-
-The Gemini API key must stay on the backend. Do not add it to React files or any `VITE_` environment variable.
-
-### Environment Variables
-
-Create a local `.env` file or add these in Netlify under Site configuration > Environment variables:
-
-```bash
-GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-3.1-flash-lite
-```
-
 ### Local Development
 
 For the frontend only:
