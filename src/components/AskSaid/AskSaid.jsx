@@ -37,31 +37,39 @@ const getRouteAction = (questionText) => {
   return null;
 };
 
+const hasAnyTerm = (message, terms) => {
+  return terms.some((term) => new RegExp(`\\b${term}\\b`, "i").test(message));
+};
+
+const hasAnyPhrase = (message, phrases) => {
+  return phrases.some((phrase) => message.includes(phrase));
+};
+
 const getLocalPortfolioReply = (questionText) => {
   const normalisedQuestion = questionText.toLowerCase();
 
-  if (normalisedQuestion.includes("project") || normalisedQuestion.includes("built") || normalisedQuestion.includes("portfolio")) {
-    return "Said has built projects including Smart Gadget, Movie Quest, Anime Quest, Weather Dashboard, Daily Planner, Java Coffee, and a CLI README Generator. For the full list, open the Projects page.";
+  if (hasAnyTerm(normalisedQuestion, ["summary", "about", "candidate", "profile"])) {
+    return "Said Khail is a technical engineer with experience across software development, automation, workflow optimisation, testing, support, and stakeholder-facing technical delivery. He is especially interested in AI-focused and problem-solving roles.";
   }
 
-  if (normalisedQuestion.includes("skill") || normalisedQuestion.includes("ai") || normalisedQuestion.includes("technical")) {
-    return "Said works with JavaScript, Python, React, Django, Pandas, Power BI, Azure, MongoDB, PostgreSQL, Selenium, Postman, and PowerApps. He is interested in AI-focused engineering, automation, and practical technology roles.";
-  }
-
-  if (normalisedQuestion.includes("experience") || normalisedQuestion.includes("work") || normalisedQuestion.includes("job")) {
+  if (hasAnyTerm(normalisedQuestion, ["experience", "work", "job", "career", "roles"])) {
     return "Said has experience as a Software Engineer at LIFYA, an IT Specialist at Yusen Logistics, and a Software Developer in Testing and Technical Support at Infinity. His work includes dashboards, workflow automation, QA, technical support, and process improvement.";
   }
 
-  if (normalisedQuestion.includes("education") || normalisedQuestion.includes("journey") || normalisedQuestion.includes("degree")) {
-    return "Said is studying an MSc in Computer Science with Artificial Intelligence at the University of York. He also has a frontend certificate from the University of Birmingham/edX and a BSc in Ecommerce and Business from the University of Plymouth.";
-  }
-
-  if (normalisedQuestion.includes("contact") || normalisedQuestion.includes("email") || normalisedQuestion.includes("github")) {
+  if (hasAnyTerm(normalisedQuestion, ["contact", "email", "github", "reach"])) {
     return "You can contact Said by email at saidkhail091@gmail.com or view his GitHub at github.com/SKhail.";
   }
 
-  if (normalisedQuestion.includes("summary") || normalisedQuestion.includes("about") || normalisedQuestion.includes("candidate")) {
-    return "Said Khail is a technical engineer with experience across software development, automation, workflow optimisation, testing, support, and stakeholder-facing technical delivery. He is especially interested in AI-focused and problem-solving roles.";
+  if (hasAnyTerm(normalisedQuestion, ["project", "projects", "built", "portfolio"])) {
+    return "Said has built projects including Smart Gadget, Movie Quest, Anime Quest, Weather Dashboard, Daily Planner, Java Coffee, and a CLI README Generator. For the full list, open the Projects page.";
+  }
+
+  if (hasAnyTerm(normalisedQuestion, ["skill", "skills", "technical", "technology"]) || hasAnyPhrase(normalisedQuestion, ["ai ", " ai", "ai-", "artificial intelligence"])) {
+    return "Said works with JavaScript, Python, React, Django, Pandas, Power BI, Azure, MongoDB, PostgreSQL, Selenium, Postman, and PowerApps. He is interested in AI-focused engineering, automation, and practical technology roles.";
+  }
+
+  if (hasAnyTerm(normalisedQuestion, ["education", "journey", "degree", "university", "msc"])) {
+    return "Said is studying an MSc in Computer Science with Artificial Intelligence at the University of York. He also has a frontend certificate from the University of Birmingham/edX and a BSc in Ecommerce and Business from the University of Plymouth.";
   }
 
   return "I can answer questions about Said’s summary, skills, experience, projects, education, AI career goals, and contact details. Try asking for a summary or asking about his projects.";

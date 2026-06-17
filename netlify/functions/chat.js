@@ -194,7 +194,7 @@ export async function handler(event) {
       headers,
       body: JSON.stringify({
         reply:
-          'ByteSaid is ready, but the Gemini API key has not been configured yet. Add GEMINI_API_KEY in Netlify environment variables to enable live AI replies.',
+          'ByteSaid is ready',
         suggestions: SUGGESTED_QUESTIONS,
       }),
     };
