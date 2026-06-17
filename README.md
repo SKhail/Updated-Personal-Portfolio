@@ -54,3 +54,54 @@ To start the development server, run:
 ```bash
 npm run dev
 ```
+
+## ByteSaid Chatbot
+
+This portfolio includes an AI chatbot persona called ByteSaid. It answers questions about Said's skills, experience, education, projects, AI career goals, and contact details.
+
+The chatbot uses:
+
+- React for the chat interface
+- Netlify Functions for the serverless backend
+- Gemini API for AI responses
+
+The Gemini API key must stay on the backend. Do not add it to React files or any `VITE_` environment variable.
+
+### Environment Variables
+
+Create a local `.env` file or add these in Netlify under Site configuration > Environment variables:
+
+```bash
+GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-3.1-flash-lite
+```
+
+### Local Development
+
+For the frontend only:
+
+```bash
+npm run dev
+```
+
+To test the chatbot function locally, run the site through Netlify CLI:
+
+```bash
+netlify dev
+```
+
+The frontend calls the function at:
+
+```bash
+/.netlify/functions/chat
+```
+
+### Deployment
+
+The `netlify.toml` file configures Netlify to run:
+
+```bash
+npm run build
+```
+
+and publish the `dist` folder. The serverless function is deployed from `netlify/functions/chat.js`.

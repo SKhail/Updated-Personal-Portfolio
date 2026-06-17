@@ -1,120 +1,40 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com'; // Make sure to import emailjs
-
-// CSS
-import Container from '../Header/Container';
+import React from "react";
+import { FaEnvelope, FaGithub } from "react-icons/fa";
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  //handle validation if people spam the text boxes
-  const validate = () => {
-    const errors = {};
-    if (!formData.name) {
-      errors.name = 'Please add a Name';
-    }
-    if (!formData.email) {
-      errors.email = 'Please add an Email';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Email address is invalid';
-    }
-    if (!formData.message) {
-      errors.message = 'Please add a message';
-    }
-    return errors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setErrors(validate());
-    if (Object.keys(errors).length === 0) {
-      setIsSubmitting(true);
-      emailjs.sendForm(REACT_EMAILJS_SERVICE_ID, REACT_EMAILJS_TEMPLATE_ID, e.target, REACT_EMAILJS_USER_ID).then(
-        (result) => {
-          console.log(result.text);
-          setIsSubmitting(false);
-          setFormData({
-            name: '',
-            email: '',
-            message: '',
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          setIsSubmitting(false);
-        }
-      );
-    }
-  };
-
   return (
-    <>
-      <div className='container mx-auto dark:bg-gray-900 '>
-        <div className='mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-1 dark:bg-gray-900'>
-          <div className='w-full text-gray-600 dark:text-gray-300 dark:bg-gray-900'>
-            <form onSubmit={handleSubmit} className='space-y-3'>
-              <div>
-                <h4 className='pt-6 py-4 text-center font-header text-xl font-medium  text-black dark:text-white  sm:text-2xl lg:text-3xl'>Have Any Questions?</h4>
-                <p className='font-body py-2 text-gray-600 dark:text-white'>
-                  If you have any questions, feel free to reach out. I've provided a contact form for your convenience. Your inquiries are important to me, and I'll get back to you
-                  as soon as possible.
-                </p>
+    <main id="contact" className="flex min-h-screen items-center bg-[#f6fbff] px-4 pb-28 pt-16 text-slate-950 transition-colors dark:bg-[#081126] dark:text-white sm:px-6 lg:px-10">
+      <section className="mx-auto w-full max-w-4xl text-center">
+        <div className="rounded-[2rem] bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 p-1 shadow-2xl shadow-blue-500/20">
+          <div className="rounded-[1.8rem] bg-white/90 p-8 backdrop-blur dark:bg-[#101b3a]/90 sm:p-12">
+            <p className="font-nav text-sm uppercase tracking-[0.35em] text-blue-600 dark:text-cyan-300">Contact</p>
+            <h1 className="mt-4 font-header text-5xl font-bold sm:text-7xl">Let’s talk.</h1>
+            <p className="mx-auto mt-6 max-w-2xl font-body text-lg leading-8 text-slate-700 dark:text-slate-300">
+              Interested in working together or discussing a role? Reach out directly.
+            </p>
 
-                <label htmlFor='name' className='py-1 block text-sm font-medium font-body dark:text-white '>
-                  Name
-                </label>
-                <input type='text' name='name' id='name' value={formData.name} onChange={handleChange} className='mt-1 p-2 w-auto border rounded ' />
-                {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
-              </div>
-              <div>
-                <label htmlFor='email' className='py-1 block text-sm font-medium font-body dark:text-white '>
-                  Email
-                </label>
-                <input type='email' name='email' id='email' value={formData.email} onChange={handleChange} className='mt-1 p-2 w-auto border rounded' />
-                {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
-              </div>
-              <div>
-                <label htmlFor='message' className='py-1 block text-sm font-medium font-body dark:text-white'>
-                  Message
-                </label>
-                <textarea name='message' id='message' rows='4' value={formData.message} onChange={handleChange} className='mt-1 p-2 w-auto border rounded'></textarea>
-                {errors.message && <p className='text-red-500 text-sm'>{errors.message}</p>}
-              </div>
-              <div>
-                <button
-                  type='submit'
-                  className={` px-3 text-sm rounded-full  ${
-                    isSubmitting
-                      ? 'bg-gray-400 cursor-not-allowed'
-                      : 'py-2 px-4 hover:bg-purple-700 text-black dark:text-white dark:bg-gray-900 font-body hover:text-white transition duration-300'
-                  }`}
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </button>
-              </div>
-            </form>
-            <div className='py-1.5'></div>
+            <div className="mx-auto mt-10 grid max-w-2xl gap-4 sm:grid-cols-2">
+              <a
+                href="mailto:saidkhail091@gmail.com"
+                className="flex items-center justify-center gap-3 rounded-2xl bg-slate-950 px-5 py-4 font-body font-semibold text-white transition hover:bg-blue-700 dark:bg-cyan-400 dark:text-slate-950 dark:hover:bg-cyan-300"
+              >
+                <FaEnvelope />
+                Email Said
+              </a>
+              <a
+                href="https://github.com/SKhail"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 font-body font-semibold text-slate-700 transition hover:border-fuchsia-300 hover:text-fuchsia-700 dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:border-cyan-300 dark:hover:text-cyan-200"
+              >
+                <FaGithub />
+                GitHub
+              </a>
+            </div>
           </div>
-          <div className='flex w-full justify-center text-gray-600 dark:text-gray-300 sm:w-5/12 md:justify-end mt-10 md:mt-0'></div>
         </div>
-      </div>
-    </>
+      </section>
+    </main>
   );
 };
 
